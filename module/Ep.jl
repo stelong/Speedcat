@@ -4,12 +4,10 @@ push!(LOAD_PATH, "/home/sl18/julia_scripts/julia_master/Speedcat/module/")
 # Define module
 module Ep
 
-# Make it visible outside
-export solve_ep
+export solve_ep # make this function visible outside
 
 # Import modules
 using Initialize
-using Revise
 using Statistics
 using Sundials
 
