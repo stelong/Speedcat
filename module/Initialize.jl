@@ -1,10 +1,10 @@
 # Define module
 module Initialize
 
-# Make them visible outside
-export init_constants
-export init_states
+export init_constants # make this function visible outside
+export init_states # make this function visible outside
 
+# Initialize constants for the EP model
 function init_constants(rat, freq)
 	if rat != "sham" && rat != "ab"
 		println("\nInvalid rat phenotype! Try with either \"sham\" or \"ab\".\n")
@@ -120,7 +120,7 @@ function init_constants(rat, freq)
 	return p
 end
 
-
+# Initialize initial variables' states for the EP model
 function init_states(rat, freq)
 	if rat != "sham" && rat != "ab"
 		println("\nInvalid rat phenotype! Try with either \"sham\" or \"ab\".\n")
@@ -147,4 +147,4 @@ function init_states(rat, freq)
 	return u0
 end
 
-end # end module
+end
